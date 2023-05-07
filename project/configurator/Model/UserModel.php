@@ -1,5 +1,5 @@
 <?php
-class userModel{
+class UserModel{
     public static function createAdmin() {
         
     }

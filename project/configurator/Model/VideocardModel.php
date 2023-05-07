@@ -1,5 +1,5 @@
 <?php
-class videocardModel{
+class VideocardModel{
     public static function findAll() {
 
     }

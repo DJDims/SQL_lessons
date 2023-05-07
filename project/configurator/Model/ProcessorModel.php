@@ -1,5 +1,5 @@
 <?php
-class processorModel{
+class ProcessorModel{
     public static function findAll() {
 
     }

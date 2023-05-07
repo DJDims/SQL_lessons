@@ -1,5 +1,5 @@
 <?php
-class userController{
+class UserController{
     public static function showTable($page) {
 
     }

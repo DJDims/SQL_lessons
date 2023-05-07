@@ -1,5 +1,5 @@
 <?php
-class motherboardModel{
+class MotherboardModel{
     public static function findAll() {
 
     }

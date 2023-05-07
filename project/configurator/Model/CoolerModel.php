@@ -1,5 +1,5 @@
 <?php
-class coolerModel{
+class CoolerModel{
     public static function findAll() {
 
     }

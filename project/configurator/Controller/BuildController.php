@@ -1,5 +1,5 @@
 <?php
-class buildController{
+class BuildController{
     public static function showTable($page) {
 
     }

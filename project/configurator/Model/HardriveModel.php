@@ -1,5 +1,5 @@
 <?php
-class hardriveModel{
+class HardriveModel{
     public static function findAll() {
 
     }

@@ -1,5 +1,5 @@
 <?php
-class corpusModel{
+class CorpusModel{
     public static function findAll() {
 
     }

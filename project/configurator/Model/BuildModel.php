@@ -1,5 +1,5 @@
 <?php
-class buildModel{
+class BuildModel{
     public static function findAll() {
 
     }

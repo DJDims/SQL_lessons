@@ -24,7 +24,7 @@ CREATE TABLE processors (
     frequency INT(2) NOT NULL,
     consuming INT(3) NOT NULL,
     threads INT(2) NOT NULL,
-    graphic TINYINT NOT NULL,
+    graphic ENUM('TRUE', 'FALSE') NOT NULL,
     price FLOAT(6) NOT NULL,
     companyId INT NOT NULL
 );
@@ -48,7 +48,7 @@ CREATE TABLE motherboards (
     memoryType ENUM('DDR','DDR2','DDR3','DDR4','DDR5'),
     memoryMax INT(3) NOT NULL,
     memoryFrequency INT(4) NOT NULL,
-    wifi TINYINT NOT NULL,
+    wifi ENUM('TRUE', 'FALSE') NOT NULL,
     sataports INT(1) NOT NULL,
     sata3ports INT(1) NOT NULL,
     usb2ports INT(1) NOT NULL,
@@ -124,11 +124,6 @@ CREATE TABLE builds (
     videocardId INT NOT NULL,
     videocardCount INT(1) NOT NULL,
     powerblockId INT NOT NULL,
-    corpusId INT NOT NULL
-);
-
-CREATE TABLE user_build (
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    userId INT NOT NULL,
-    buildId INT NOT NULL
+    corpusId INT NOT NULL,
+    userId INT NOT NULL
 );

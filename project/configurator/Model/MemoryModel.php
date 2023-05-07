@@ -1,5 +1,5 @@
 <?php
-class memoryModel{
+class MemoryModel{
     public static function findAll() {
 
     }

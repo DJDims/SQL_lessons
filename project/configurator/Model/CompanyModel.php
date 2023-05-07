@@ -1,5 +1,5 @@
 <?php
-class companyModel{
+class CompanyModel{
     public static function findAll() {
 
     }

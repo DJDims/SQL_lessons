@@ -1,5 +1,5 @@
 <?php
-class socketModel{
+class SocketModel{
     public static function findAll() {
 
     }

@@ -1,5 +1,5 @@
 <?php
-class powerblockModel{
+class PowerblockModel{
     public static function findAll() {
 
     }
