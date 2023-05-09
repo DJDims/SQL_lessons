@@ -32,7 +32,6 @@ CREATE TABLE processors (
 CREATE TABLE coolers (
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(80) NOT NULL UNIQUE,
-    type ENUM('air', 'water') NOT NULL,
     rotationsMin INT(4) NOT NULL,
     rotationsMax INT(4) NOT NULL,
     connector ENUM('2','4') NOT NULL,
