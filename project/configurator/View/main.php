@@ -15,9 +15,9 @@ ob_start();
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <!-- item -->
-                <div class="card mx-auto" style="width: 50rem;">
+                <div class="card mx-auto" style="width: 53%;">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Card title1</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                             content.</p>
@@ -29,9 +29,9 @@ ob_start();
             </div>
             <div class="carousel-item">
                 <!-- item -->
-                <div class="card mx-auto" style="width: 50rem;">
+                <div class="card mx-auto" style="width: 53%;">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Card title2</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                             content.</p>
@@ -43,9 +43,9 @@ ob_start();
             </div>
             <div class="carousel-item">
                 <!-- item -->
-                <div class="card mx-auto" style="width: 50rem;">
+                <div class="card mx-auto" style="width: 53%;">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Card title3</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
                             content.</p>
@@ -84,5 +84,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-include 'View/layout.php';
+include 'layout.php';
 ?>

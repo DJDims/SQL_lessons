@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'minecraft';
+    src: url("Minecraft.ttf");
+}
+
+body {
+    font-family: 'minecraft' !important;
+}
+
+
+header .navbar {
+    background-color: black !important;
+}
+
+.navbar-brand {
+    color: #00FF00 !important;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.nav-link {
+    color: #00FF00 !important;
+}
