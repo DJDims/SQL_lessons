@@ -5,8 +5,9 @@
 
 body {
     font-family: 'minecraft' !important;
+    letter-spacing: 2px;
+    background-color: #1F1C1C !important;
 }
-
 
 header .navbar {
     background-color: black !important;
@@ -20,4 +21,85 @@ header .navbar {
 
 .nav-link {
     color: #00FF00 !important;
+}
+
+.navbar-toggler {
+    background-color: #00FF00 !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url(../images/a2rigth.png) !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../images/a2left.png) !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1 !important;
+}
+
+.carousel-indicators {
+    top: 25vmin !important;
+}
+
+.carousel-indicators button {
+    background-color: lime !important;
+}
+
+.card {
+    background-color: #2C2C2C !important;
+    border-radius: 0 !important;
+    border: 3px solid #BCE0E6 !important;
+}
+
+.card-body {
+    padding: 30px !important;
+    height: auto !important;
+}
+
+.card-text {
+    border: 3px solid #BCE0E6 !important;
+    color: lime;
+    padding: 13px;
+    font-size: larger;
+}
+
+.btn-card {
+    border: 3px solid #FF0000 !important;
+    color: lime !important;
+    background-color: #242424 !important;
+    padding: 13px 35px !important;
+    text-decoration: none !important;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+h2 {
+    color: lime !important;
+}
+
+form.form {
+    background-color: #2C2C2C;
+    border: 3px solid #BCE0E6;
+    padding: 69px;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    background-color: #353535 !important;
+    border: 3px solid #FF0000 !important;
+}
+
+.form-label, legend {
+    color: lime !important;
+}
+
+.btn-login {
+    color: lime !important;
+    border-radius: 0 !important;
+    border: 3px solid #FF0000 !important;
+    background-color: #242424 !important;
 }

@@ -4,19 +4,21 @@ class UserController{
 
     }
 
-    public static function showCreate() {
-
+    public static function showLogin() {
+        include_once('View/login.php');
+        return;
     }
 
-    public static function create() {
+    public static function login() {
         
     }
 
-    public static function showEdit($id) {
-        
+    public static function showRegister() {
+        include_once('View/register.php');
+        return;
     }
 
-    public static function edit($id) {
+    public static function register() {
         
     }
 

@@ -2,7 +2,7 @@
 ob_start();
 ?>
 
-<section>
+<section class="mt-3">
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -15,42 +15,31 @@ ob_start();
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <!-- item -->
-                <div class="card mx-auto" style="width: 53%;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title1</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                <div class="card mx-auto" style="width: 40%;">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text mb-4">Ever dreamed of building your own computer?<br>You can do it with our computer configurator!
                             content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <a href="#" class="btn btn-card">Build your PC!</a>
                     </div>
                 </div>
                 <!-- item -->
             </div>
             <div class="carousel-item">
                 <!-- item -->
-                <div class="card mx-auto" style="width: 53%;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title2</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                            content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                <div class="card mx-auto" style="width: 40%;">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text mb-4">You don't want to build your own computer.<br>Check out our ready-made builds for different needs!</p>
+                        <a href="#" class="btn btn-card">Check out!</a>
                     </div>
                 </div>
                 <!-- item -->
             </div>
             <div class="carousel-item">
                 <!-- item -->
-                <div class="card mx-auto" style="width: 53%;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title3</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                            content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                <div class="card mx-auto" style="width: 40%;">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <p class="card-text mb-4">We also have a list of all computer components.<br>You're interested? Then go ahead!</p>
+                        <a href="#" class="btn btn-card">Check out!</a>
                     </div>
                 </div>
                 <!-- item -->
@@ -69,18 +58,9 @@ ob_start();
     </div>
 </section>
 
-<!-- <section>
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-        </div>
-    </div>
-</section> -->
+<section class="mt-5">
+    <h2>Latest builds</h2>
+</section>
 
 <?php
 $content = ob_get_clean();

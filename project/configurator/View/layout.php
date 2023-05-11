@@ -18,7 +18,8 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Machina maker</a>
+                <img src="../Images/logo.svg">
+                <a class="navbar-brand" href="/">Machina maker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -35,42 +36,44 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Computer components</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Companies</a></li>
-                                <li><a class="dropdown-item" href="#">Coolers</a></li>
-                                <li><a class="dropdown-item" href="#">Corpuses</a></li>
-                                <li><a class="dropdown-item" href="#">Harddrives</a></li>
-                                <li><a class="dropdown-item" href="#">Memorys</a></li>
-                                <li><a class="dropdown-item" href="#">Motherboards</a></li>
-                                <li><a class="dropdown-item" href="#">Powerblocks</a></li>
-                                <li><a class="dropdown-item" href="#">Processors</a></li>
-                                <li><a class="dropdown-item" href="#">Sockets</a></li>
-                                <li><a class="dropdown-item" href="#">Videocards</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>
+                        <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'ADMIN') { ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Manage menu
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Companies</a></li>
+                                    <li><a class="dropdown-item" href="#">Coolers</a></li>
+                                    <li><a class="dropdown-item" href="#">Corpuses</a></li>
+                                    <li><a class="dropdown-item" href="#">Harddrives</a></li>
+                                    <li><a class="dropdown-item" href="#">Memorys</a></li>
+                                    <li><a class="dropdown-item" href="#">Motherboards</a></li>
+                                    <li><a class="dropdown-item" href="#">Powerblocks</a></li>
+                                    <li><a class="dropdown-item" href="#">Processors</a></li>
+                                    <li><a class="dropdown-item" href="#">Sockets</a></li>
+                                    <li><a class="dropdown-item" href="#">Videocards</a></li>
+                                </ul>
+                            </li>
+                        <?php } ?>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav mb-2 mb-lg-0 float-end">
-                        <li class="nav-item">
-                            <a class="nav-link">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Logout</a>
-                        </li>
+                        <?php if (isset($_SESSION['sessionId'])) { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Logout">Logout</a>
+                            </li>
+                        <?php } else { ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="showLogin">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="showRegister">Register</a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

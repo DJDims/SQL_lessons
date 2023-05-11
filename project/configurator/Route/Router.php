@@ -6,7 +6,13 @@ switch($route){
 	case '':
 	case 'index':
 	case 'index.php':
-		MainController::StartSite();
+		MainController::startSite();
+		break;
+	case 'showLogin':
+		UserController::showLogin();
+		break;
+	case 'showRegister':
+		UserController::showRegister();
 		break;
 //---------------company---------------
 	case 'companies':
