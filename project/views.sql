@@ -1,6 +1,8 @@
 CREATE VIEW build_view AS 
     SELECT 
         builds.id,
+        builds.title,
+        builds.description,
         processors.name AS processor,
         coolers.name AS cooler,
         builds.coolerCount,

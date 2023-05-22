@@ -11,8 +11,14 @@ switch($route){
 	case 'showLogin':
 		UserController::showLogin();
 		break;
+	case 'login':
+		UserController::login();
+		break;
 	case 'showRegister':
 		UserController::showRegister();
+		break;
+	case 'register':
+		UserController::register();
 		break;
 //---------------company---------------
 	case 'companies':

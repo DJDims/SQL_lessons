@@ -35,7 +35,7 @@ ob_start();
         </tr>
     </thead>
     <tbody>
-    <?php foreach ($ as $k => $v) { ?>
+    <?php foreach ($sockets as $k => $v) { ?>
         <tr class="table-active">
             <th scope="row"><p><?php echo ($k + 1)+(($pageNumber-1)*10); ?></p></th>
             <td>

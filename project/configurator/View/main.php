@@ -2,48 +2,41 @@
 ob_start();
 ?>
 
+<!-- silder -->
 <section class="mt-3">
     <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
         <div class="carousel-inner">
+            <!-- item -->
             <div class="carousel-item active">
-                <!-- item -->
-                <div class="card mx-auto" style="width: 40%;">
+                <div class="card mx-auto" style="width: 53%;">
                     <div class="card-body d-flex flex-column align-items-center">
                         <p class="card-text mb-4">Ever dreamed of building your own computer?<br>You can do it with our computer configurator!
-                            content.</p>
+                        content.</p>
                         <a href="#" class="btn btn-card">Build your PC!</a>
                     </div>
                 </div>
-                <!-- item -->
             </div>
+            <!-- item -->
+            <!-- item -->
             <div class="carousel-item">
-                <!-- item -->
-                <div class="card mx-auto" style="width: 40%;">
+                <div class="card mx-auto" style="width: 53%;">
                     <div class="card-body d-flex flex-column align-items-center">
                         <p class="card-text mb-4">You don't want to build your own computer.<br>Check out our ready-made builds for different needs!</p>
                         <a href="#" class="btn btn-card">Check out!</a>
                     </div>
                 </div>
-                <!-- item -->
             </div>
+            <!-- item -->
+            <!-- item -->
             <div class="carousel-item">
-                <!-- item -->
-                <div class="card mx-auto" style="width: 40%;">
+                <div class="card mx-auto" style="width: 53%;">
                     <div class="card-body d-flex flex-column align-items-center">
                         <p class="card-text mb-4">We also have a list of all computer components.<br>You're interested? Then go ahead!</p>
                         <a href="#" class="btn btn-card">Check out!</a>
                     </div>
                 </div>
-                <!-- item -->
             </div>
+            <!-- item -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
@@ -51,15 +44,32 @@ ob_start();
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 </section>
+<!-- silder -->
 
 <section class="mt-5">
-    <h2>Latest builds</h2>
+    <h2 class="text-center">Latest builds</h2>
+    <div class="album">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card" >
+                        <div class="card-body">
+                            <h5 class="card-title">Build title</h5>
+                            <span class="badge rounded-pill text-bg-secondary">By user</span>
+                            <p class="card-text">Build description description description description description description</p>
+                            <a href="#" class="btn btn-primary">Show build</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <?php

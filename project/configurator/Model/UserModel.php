@@ -3,12 +3,14 @@ class UserModel{
     public static function createAdmin() {
         $countUsers = UserModel::countUsers();
 
-        if ($countUsers['COUNT(id)'] == 0) {
-            $password = password_hash('12345', PASSWORD_DEFAULT);
-            $query = "INSERT INTO `users`(`username`, `password`, `role`) VALUES ('Admin', '$password', 2)";
-            $db = new database();
-            $db -> executeRun($query);
+        if ($countUsers['COUNT(id)'] != 0) {
+            return;
         }
+
+        $password = password_hash('12345', PASSWORD_DEFAULT);
+        $query = "INSERT INTO `users`(`username`, `password`, `role`) VALUES ('Admin', '$password', 2)";
+        $db = new database();
+        $db -> executeRun($query);
 
         return;
     }
@@ -19,6 +21,37 @@ class UserModel{
         $response = $db -> getOne($query);
 
         return $response;
+    }
+
+    public static function login() {
+        if (!isset($_POST['send'])) {
+            return false;
+        }
+        
+        $username = trim($_POST['username']);
+        $password = trim($_POST['password']);
+        
+        if ($username == "" || $password == "") {
+            return false;
+        }
+
+        $query = "SELECT * FROM `users` WHERE `username` = '$username'";
+        $db = new database();
+        $response = $db -> getOne($query);
+
+        if ($response == null) {
+            return false;
+        }
+
+        if (!password_verify($password, $response['password'])) {
+            return false;
+        }
+
+        $_SESSION['sessionId'] = session_id();
+        $_SESSION['userId'] = $response['id'];
+        $_SESSION['role'] = $response['role'];
+
+        return true;
     }
 
     public static function findAll() {

@@ -10,7 +10,23 @@ class UserController{
     }
 
     public static function login() {
-        
+        if (isset($_SESSION['userId'])) {
+            header('Location: profile');
+            return;
+        }
+
+        $result = UserModel::login();
+
+        if (isset($result) && $result == true) {
+            MainController::showMain();
+        } else {
+            $_SESSION['alert']['message'] = 'Неверный логин или пароль';
+            $_SESSION['alert']['type'] = 'alert-danger';
+            $_SESSION['alert']['icon'] = '#exclamation-triangle-fill';
+            include_once('View/login.php');
+        }
+
+        return;
     }
 
     public static function showRegister() {

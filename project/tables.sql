@@ -124,5 +124,7 @@ CREATE TABLE builds (
     videocardCount INT(1) NOT NULL,
     powerblockId INT NOT NULL,
     corpusId INT NOT NULL,
-    userId INT NOT NULL
+    userId INT NOT NULL,
+    title VARCHAR(100) NOT NULL,
+    description VARCHAR(1000) NOT NULL
 );

@@ -6,8 +6,8 @@ ob_start();
     <form method="POST" action="register" class="w-25 form">
         <legend>Register form</legend>
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
@@ -17,7 +17,7 @@ ob_start();
             <label for="confirmpassword" class="form-label">Confirm password</label>
             <input type="password" class="form-control" id="confirmpassword" name="confirmpassword">
         </div>
-        <button type="submit" class="btn btn-login w-25">Register</button>
+        <button type="submit" class="btn btn-login" name="send">Register</button>
     </form>
 </section>
 
