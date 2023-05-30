@@ -52,25 +52,27 @@ ob_start();
 </section>
 <!-- silder -->
 
-<section class="mt-5">
-    <h2 class="text-center">Latest builds</h2>
-    <div class="album">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-md-3 g-3">
-                <div class="col">
-                    <div class="card" >
-                        <div class="card-body">
-                            <h5 class="card-title">Build title</h5>
-                            <span class="badge rounded-pill text-bg-secondary">By user</span>
-                            <p class="card-text">Build description description description description description description</p>
-                            <a href="#" class="btn btn-primary">Show build</a>
-                        </div>
+<!-- latest builds -->
+<div class="album py-5">
+    <div class="container">
+        <h2 class="text-center">Latest builds</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <!-- card -->
+            <div class="col">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Build title</h5>
+                        <span class="badge rounded-pill text-bg-secondary">By user</span>
+                        <p class="card-text">Build description description description description description description</p>
+                        <a href="#" class="btn btn-primary">Show build</a>
                     </div>
                 </div>
             </div>
+            <!-- card -->
         </div>
     </div>
-</section>
+</div>
+<!-- latest builds -->
 
 <?php
 $content = ob_get_clean();

@@ -59,15 +59,15 @@ ob_start();
 	<nav aria-label="Page navigation example">
 		<ul class="pagination pagination-lg">
 			<li class="page-item <?php if($pageNumber == 1) { echo 'disabled'; }?>">
-				<a class="page-link" href="showTableCategories?1" aria-label="Previous">
+				<a class="page-link" href="showTableCompanies?1" aria-label="Previous">
 					<span aria-hidden="true">&laquo;</span>
 				</a>
 			</li>
 			<?php for ($i=1; $i <= $pagesCount; $i++) { ?>
-				<li class="page-item"><a class="page-link <?php if($i == $pageNumber) { echo 'active'; }?>" href="showTableCategories?<?php echo $i; ?>"><?php echo $i; ?></a></li>
+				<li class="page-item"><a class="page-link <?php if($i == $pageNumber) { echo 'active'; }?>" href="showTableCompanies?<?php echo $i; ?>"><?php echo $i; ?></a></li>
 			<?php } ?>
 			<li class="page-item <?php if($pageNumber == $pagesCount) { echo 'disabled'; }?>">
-				<a class="page-link" href="showTableCategories?<?php echo $pagesCount; ?>" aria-label="Next">
+				<a class="page-link" href="showTableCompanies?<?php echo $pagesCount; ?>" aria-label="Next">
 					<span aria-hidden="true">&raquo;</span>
 				</a>
 			</li>
@@ -78,5 +78,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-include 'layout.php';
+include '../layout.php';
 ?>

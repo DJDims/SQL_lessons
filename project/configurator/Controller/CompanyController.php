@@ -1,7 +1,11 @@
 <?php
 class CompanyController{
     public static function showTable($page) {
+        $offset = ($page-1)*10;
+        $companies = CompanyModel::findByOffest($offset, 10);
 
+        include_once('View/Company/table.php');
+        return;
     }
 
     public static function showCreate() {

@@ -9,7 +9,11 @@ class CompanyModel{
     }
 
     public static function findByOffest($offset, $limit) {
+        $query = "SELECT * FROM `companies` ORDER BY `name` ASC LIMIT $limit OFFSET $offset";
+        $db = new database();
+        $response = $db -> getAll($query);
 
+        return $response;
     }
 
     public static function showCreate() {

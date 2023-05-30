@@ -39,14 +39,6 @@ header .navbar {
     opacity: 1 !important;
 }
 
-.carousel-indicators {
-    top: 25vmin !important;
-}
-
-.carousel-indicators button {
-    background-color: lime !important;
-}
-
 .card {
     background-color: #2C2C2C !important;
     border-radius: 0 !important;
@@ -58,9 +50,14 @@ header .navbar {
     height: auto !important;
 }
 
+.card-title {
+    color: lime !important;
+
+}
+
 .card-text {
     border: 3px solid #BCE0E6 !important;
-    color: lime;
+    color: white;
     padding: 13px;
     font-size: larger;
 }
@@ -91,6 +88,7 @@ form.form {
     border-radius: 0 !important;
     background-color: #353535 !important;
     border: 3px solid #FF0000 !important;
+    color: white !important;
 }
 
 .form-label, legend {

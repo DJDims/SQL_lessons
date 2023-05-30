@@ -43,16 +43,16 @@
                                     Manage menu
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Companies</a></li>
-                                    <li><a class="dropdown-item" href="#">Coolers</a></li>
-                                    <li><a class="dropdown-item" href="#">Corpuses</a></li>
-                                    <li><a class="dropdown-item" href="#">Harddrives</a></li>
-                                    <li><a class="dropdown-item" href="#">Memorys</a></li>
-                                    <li><a class="dropdown-item" href="#">Motherboards</a></li>
-                                    <li><a class="dropdown-item" href="#">Powerblocks</a></li>
-                                    <li><a class="dropdown-item" href="#">Processors</a></li>
-                                    <li><a class="dropdown-item" href="#">Sockets</a></li>
-                                    <li><a class="dropdown-item" href="#">Videocards</a></li>
+                                    <li><a class="dropdown-item" href="companies?page=1">Companies</a></li>
+                                    <li><a class="dropdown-item" href="coolers?page=1">Coolers</a></li>
+                                    <li><a class="dropdown-item" href="corpuses?page=1">Corpuses</a></li>
+                                    <li><a class="dropdown-item" href="harddrives?page=1">Harddrives</a></li>
+                                    <li><a class="dropdown-item" href="memorys?page=1">Memorys</a></li>
+                                    <li><a class="dropdown-item" href="motherboards?page=1">Motherboards</a></li>
+                                    <li><a class="dropdown-item" href="powerblocks?page=1">Powerblocks</a></li>
+                                    <li><a class="dropdown-item" href="processors?page=1">Processors</a></li>
+                                    <li><a class="dropdown-item" href="sockets?page=1">Sockets</a></li>
+                                    <li><a class="dropdown-item" href="videocards?page=1">Videocards</a></li>
                                 </ul>
                             </li>
                         <?php } ?>
