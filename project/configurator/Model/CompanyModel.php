@@ -1,11 +1,19 @@
 <?php
 class CompanyModel{
     public static function findAll() {
+        $query = "SELECT * FROM `companies` ORDER BY `name` ASC";
+        $db = new database();
+        $response = $db -> getAll($query);
 
+        return $response;
     }
 
-    public static function findById() {
+    public static function findById($id) {
+        $query = "SELECT * FROM `companies` WHERE `id` = $id";
+        $db = new database();
+        $response = $db -> getOne($query);
 
+        return $response;
     }
 
     public static function findByOffest($offset, $limit) {
@@ -14,6 +22,16 @@ class CompanyModel{
         $response = $db -> getAll($query);
 
         return $response;
+    }
+
+    public static function countPages($limit) {
+        $query = "SELECT COUNT(id) FROM `companies`";
+        $db = new database();
+        $response = $db -> getOne($query);
+
+        $pagesCount = ceil($response['COUNT(id)'] / $limit);
+
+        return $pagesCount;
     }
 
     public static function showCreate() {

@@ -1,4 +1,4 @@
-CREATE VIEW build_view AS 
+CREATE VIEW builds_view AS 
     SELECT 
         builds.id,
         builds.title,

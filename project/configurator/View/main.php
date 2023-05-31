@@ -21,7 +21,7 @@ ob_start();
             <div class="carousel-item">
                 <div class="card mx-auto" style="width: 53%;">
                     <div class="card-body d-flex flex-column align-items-center">
-                        <p class="card-text mb-4">You don't want to build your own computer.<br>Check out our ready-made builds for different needs!</p>
+                        <p class="card-text mb-4">Don't you want to build your own computer?<br>Check out our ready-made builds for different needs!</p>
                         <a href="#" class="btn btn-card">Check out!</a>
                     </div>
                 </div>

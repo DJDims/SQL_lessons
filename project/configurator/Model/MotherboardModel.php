@@ -1,15 +1,37 @@
 <?php
 class MotherboardModel{
     public static function findAll() {
+        $query = "SELECT * FROM `motherboards_view` ORDER BY `name` ASC";
+        $db = new database();
+        $response = $db -> getAll($query);
 
+        return $response;
     }
 
-    public static function findById() {
+    public static function findById($id) {
+        $query = "SELECT * FROM `motherboards_view` WHERE `id` = $id";
+        $db = new database();
+        $response = $db -> getOne($query);
 
+        return $response;
     }
 
     public static function findByOffest($offset, $limit) {
+        $query = "SELECT * FROM `motherboards_view` ORDER BY `name` ASC LIMIT $limit OFFSET $offset";
+        $db = new database();
+        $response = $db -> getAll($query);
 
+        return $response;
+    }
+
+    public static function countPages($limit) {
+        $query = "SELECT COUNT(id) FROM `motherboards`";
+        $db = new database();
+        $response = $db -> getOne($query);
+
+        $pagesCount = ceil($response['COUNT(id)'] / $limit);
+
+        return $pagesCount;
     }
 
     public static function showCreate() {

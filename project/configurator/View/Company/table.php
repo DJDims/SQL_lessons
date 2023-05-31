@@ -37,17 +37,17 @@ ob_start();
     <tbody>
     <?php foreach ($companies as $k => $v) { ?>
         <tr class="table-active">
-            <th scope="row"><p><?php echo ($k + 1)+(($pageNumber-1)*10); ?></p></th>
+            <th scope="row"><p><?php echo ($k + 1)+(($page-1)*10); ?></p></th>
             <td>
                 <p>
-                    <a href="showDetails?<?php echo $v['']; ?>"><?php echo $v['']; ?></a>
+                    <a href="showDetails?<?php echo $v['id']; ?>"><?php echo $v['name']; ?></a>
                 </p>
             </th>
             <td class="text-end">
-                <a href="showEdit?<?php echo $v['']; ?>" class="btn btn-warning">Edit</a>
+                <a href="showEdit?<?php echo $v['id']; ?>" class="btn btn-warning">Edit</a>
             </td>
             <td class="text-end">
-                <a href="showDelete?<?php echo $v['']; ?>" class="btn btn-danger">Delete</a>
+                <a href="showDelete?<?php echo $v['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
         </tr>
     <?php } ?>
@@ -58,16 +58,16 @@ ob_start();
 <div class="d-flex justify-content-center">	
 	<nav aria-label="Page navigation example">
 		<ul class="pagination pagination-lg">
-			<li class="page-item <?php if($pageNumber == 1) { echo 'disabled'; }?>">
-				<a class="page-link" href="showTableCompanies?1" aria-label="Previous">
+			<li class="page-item <?php if($page == 1) { echo 'disabled'; }?>">
+				<a class="page-link" href="companies?page=1" aria-label="Previous">
 					<span aria-hidden="true">&laquo;</span>
 				</a>
 			</li>
 			<?php for ($i=1; $i <= $pagesCount; $i++) { ?>
-				<li class="page-item"><a class="page-link <?php if($i == $pageNumber) { echo 'active'; }?>" href="showTableCompanies?<?php echo $i; ?>"><?php echo $i; ?></a></li>
+				<li class="page-item"><a class="page-link <?php if($i == $page) { echo 'active'; }?>" href="companies?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
 			<?php } ?>
-			<li class="page-item <?php if($pageNumber == $pagesCount) { echo 'disabled'; }?>">
-				<a class="page-link" href="showTableCompanies?<?php echo $pagesCount; ?>" aria-label="Next">
+			<li class="page-item <?php if($page == $pagesCount) { echo 'disabled'; }?>">
+				<a class="page-link" href="companies?page=<?php echo $pagesCount; ?>" aria-label="Next">
 					<span aria-hidden="true">&raquo;</span>
 				</a>
 			</li>
@@ -78,5 +78,5 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-include '../layout.php';
+include 'View/layout.php';
 ?>

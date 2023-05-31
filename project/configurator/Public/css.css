@@ -101,3 +101,17 @@ form.form {
     border: 3px solid #FF0000 !important;
     background-color: #242424 !important;
 }
+
+.page-link {
+    background-color: black !important;
+    border-color: lime !important;
+    color: white !important;
+}
+
+.page-link.active {
+    color: lime !important;
+}
+
+th {
+    color: white !important;
+}
