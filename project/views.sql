@@ -84,7 +84,9 @@ CREATE VIEW motherboards_view AS
         motherboards.price,
         sockets.name AS socket,
         companies.name AS companyName
-    FROM motherboards INNER JOIN companies ON motherboards.companyId = companies.id INNER JOIN sockets ON motherboards.socketId = sockets.id;
+    FROM motherboards 
+        INNER JOIN companies ON motherboards.companyId = companies.id 
+        INNER JOIN sockets ON motherboards.socketId = sockets.id;
 
 CREATE VIEW powerblocks_view AS 
     SELECT 
@@ -106,7 +108,9 @@ CREATE VIEW processors_view AS
         processors.price,
         sockets.name as socketName,
         companies.name AS companyName
-    FROM processors INNER JOIN companies ON processors.companyId = companies.id INNER JOIN sockets ON processors.socketId = sockets.id;
+    FROM processors 
+        INNER JOIN companies ON processors.companyId = companies.id 
+        INNER JOIN sockets ON processors.socketId = sockets.id;
 
 CREATE VIEW videocards_view AS 
     SELECT 
